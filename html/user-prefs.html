@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/user-pref.css">
+
+    <title>Preferences</title>
+</head>
+
+<body>
+    <nav>
+        <!-- nav bar  -->
+        <h1>nav</h1>
+    </nav>
+    <main>
+        <h1>header</h1>
+        <!-- Here we will use a <form> to get the user preferences and save them to localStorage. -->
+        <!-- The application should use those CSS preferences and show the pages accordingly. -->
+        <form action="">
+            <!-- Use HTML5 color <input> to let the user set its background and text color of the home page, keep in localStorage and respect his choices in next visits. -->
+            <label for="color">Pick your favorite color</label>
+            <input type="color" name="color" id="color">
+            <br>
+            <!-- Use HTML5 date and time <input>s to let the user set his exact birth time, when he does show a random astrological forecast in the home page (from an array of 3 ready-made forecasts) -->
+            <label for="date">Pick your birth date</label>
+            <input type="date" name="date" id="date">
+            <br>
+            <!-- TIP: you will need event.preventDefault in the onsubmit event handler. -->
+            <label for="time">choose the time of yourbirth</label>
+            <input type="time" name="time" id="time">
+            <br>
+            <label for="email">Enter your Email</label>
+            <input type="email" name="email" id="email">
+            <br>
+            <label for="age">Pick your age</label>
+            <input type="range" min="18" max="120" name="age" id="age">
+            <br>
+        </form>
+        <section>
+            <button>
+                <a href="index.html">Home</a>
+            </button>
+
+            <button>
+                <a href="map.html">Map</a>
+            </button>
+        </section>
+    </main>
+
+
+    <footer>
+        <h2>footer</h2>
+    </footer>
+</body>
+
+</html>

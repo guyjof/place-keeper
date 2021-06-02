@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+}
+
+nav {
+  border: 1px solid black;
+}
+header {
+  border: 1px solid black;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+article {
+  border: 1px solid black;
+  flex-grow: 1;
+}
+
+footer {
+  border: 1px solid black;
+}
