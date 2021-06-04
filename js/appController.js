@@ -27,5 +27,6 @@ function initMap(lat, lng) {
         },
         animation: google.maps.Animation.DROP
     });
-
 }
+
+
