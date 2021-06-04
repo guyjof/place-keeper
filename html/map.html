@@ -10,30 +10,76 @@
 </head>
 
 <body>
-    <nav>
-        <!-- nav bar  -->
-        <h1>nav</h1>
+    <nav class="border center">
+        <h1>Welcome to Pokemon World!</h1>
     </nav>
-    <main>
-        <h1>header</h1>
-        <section>
 
-        </section>
+    <main class=" center flex">
+        <div id="map"></div>
+        <div class="places-list">
+            <table>
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Place</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Home</td>
+                        <td>Petah Tikva</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
 
     <section>
         <button>
-            <a href="user-prefs.html">Preferences</a>
+            <a href="user-prefs.html">Home</a>
         </button>
 
         <button>
-            <a href="index.html">Home</a>
+            <a href="index.html">Preferences</a>
         </button>
     </section>
 
-    <footer>
+    <section class="place-btns">
+        <button>
+            Add
+        </button>
+        <button>
+            Delete
+        </button>
+    </section>
+
+
+    <footer class="border center">
         <h2>footer</h2>
     </footer>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiRrtdr43yR0RnPf3j9N-telgAqwwd2Bk&map_ids=25c4971063e3a54&callback=initMap"
+        type="text/javascript"></script>
+    <script src="/js/appController.js"></script>
+    <!-- <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiRrtdr43yR0RnPf3j9N-telgAqwwd2Bk&callback=initMap"
+        type="text/javascript"></script> -->
 </body>
 
 </html>
