@@ -1,4 +1,5 @@
 'use strict'
+var gPlaces = getPlaces()
 
 function initMap(lat, lng) {
     if (!lat) lat = 32.0749831;
@@ -17,7 +18,7 @@ function initMap(lat, lng) {
         gestureHandling: "cooperative"
     });
 
-    var playerMarker = new google.maps.Marker({
+    new google.maps.Marker({
         position: { lat: 29.55823779167494, lng: 34.9526631121632 },
         map,
         title: 'You Are Here',
@@ -27,24 +28,33 @@ function initMap(lat, lng) {
         },
         animation: google.maps.Animation.DROP
     });
-}
 
-addPlace({ coords: { lat: 29.558194724113807, lng: 34.95236593674963 } })
+    function renderMarkers() {
+        for (var i = 0; i < gPlaces.length; i++) {
+            addPlace(gPlaces[i])
+        }
 
-function addPlace(place) {
-    var pokeballMarker = new google.maps.Marker({
-        position: place.coords,
-        map,
-        title: 'Saved',
-        icon: {
-            url: '/img/pokeball.png',
-            scaledSize: new google.maps.Size(40, 40)
-        },
-        animation: google.maps.Animation.DROP
+    }
+
+    google.maps.event.addListener(map, 'click', (event) => {
+        addPlace({ coords: event.latLng });
     });
 
-}
 
+    function addPlace(place) {
+        new google.maps.Marker({
+            position: place.coords,
+            map,
+            title: 'Saved',
+            icon: {
+                url: '/img/pokeball.png',
+                scaledSize: new google.maps.Size(40, 40)
+            },
+            animation: google.maps.Animation.DROP
+        });
+
+    }
+}
 
 // if (navigator.geolocation) {
 //     navigator.geolocation.getCurrentPosition(function (position) {
