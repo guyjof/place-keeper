@@ -27,9 +27,13 @@ function initMap(lat, lng) {
         },
         animation: google.maps.Animation.DROP
     });
+}
 
+addPlace({ coords: { lat: 29.558194724113807, lng: 34.95236593674963 } })
+
+function addPlace(place) {
     var pokeballMarker = new google.maps.Marker({
-        position: { lat, lng },
+        position: place.coords,
         map,
         title: 'Saved',
         icon: {
@@ -38,7 +42,9 @@ function initMap(lat, lng) {
         },
         animation: google.maps.Animation.DROP
     });
+
 }
+
 
 // if (navigator.geolocation) {
 //     navigator.geolocation.getCurrentPosition(function (position) {
