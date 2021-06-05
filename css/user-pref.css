@@ -1,3 +1,8 @@
+@font-face {
+  font-family: PressStart;
+  src: url(/fonts/Press_Start_2P/PressStart2P-Regular.ttf);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,19 +10,16 @@
 body {
   margin: 0;
   text-align: center;
+  font-family: PressStart;
+  height: 100vh;
+  background-color: #e0e0e0;
 }
 
-nav {
-  border: 1px solid black;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  border: 1px solid black;
-}
 header {
-  border: 1px solid black;
+  position: fixed;
+  top: 20px;
+  width: 90%;
+  line-height: 1.2;
 }
 main {
   display: flex;
@@ -27,25 +29,80 @@ main {
 }
 
 section {
-  border: 1px solid black;
+  height: 100vh;
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+}
+
+label {
+  margin-bottom: 20px;
+}
+input {
+  border: 3px solid black;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-size: 20px;
+  font-family: PressStart;
+}
+
+.age-num {
+  margin-top: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-content: center;
   align-items: center;
-  gap: 50px;
 }
-
-article {
-  border: 1px solid black;
-  flex-grow: 1;
-}
-
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  border: 1px solid black;
+  position: fixed;
+  bottom: 20px;
+  height: 129px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+button {
+  padding: 1em 1.5em;
+  background-color: #71b8f0;
+  border: 3px solid #5892bd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  font-family: PressStart;
+  color: #000;
+}
+
+.text-bubble {
+  border: 5px solid #b5dae5;
+  background-color: #fff;
+  border-radius: 50px;
+}
+
+#age {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 25px;
+  background: #e0e0e0;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+#age::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 30px;
+  border: 3px solid black;
+  background: #b5dae5;
+  cursor: pointer;
 }

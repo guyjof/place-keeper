@@ -1,3 +1,8 @@
+@font-face {
+  font-family: PressStart;
+  src: url(/fonts/Press_Start_2P/PressStart2P-Regular.ttf);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,13 +10,17 @@
 body {
   margin: 0;
   text-align: center;
+  font-family: PressStart;
+  height: 100vh;
+  background-image: url(/img/town.png);
+  background-position: left;
 }
 
-nav {
-  border: 1px solid black;
-}
 header {
-  border: 1px solid black;
+  position: fixed;
+  top: 20px;
+  width: 90%;
+  line-height: 1.2;
 }
 main {
   display: flex;
@@ -31,10 +40,37 @@ section {
 }
 
 article {
-  border: 1px solid black;
   flex-grow: 1;
+  height: 500px;
 }
 
 footer {
-  border: 1px solid black;
+  position: fixed;
+  bottom: 20px;
+  height: 129px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+button {
+  padding: 1em 1.5em;
+  background-color: #71b8f0;
+  border: 3px solid #5892bd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  font-family: PressStart;
+  color: #000;
+}
+
+.text-bubble {
+  border: 5px solid #b5dae5;
+  background-color: #fff;
+  border-radius: 50px;
 }
