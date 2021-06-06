@@ -16,10 +16,9 @@ body {
 }
 
 header {
-  position: fixed;
-  top: 20px;
+  margin: auto;
+  margin-top: 20px;
   width: 90%;
-  line-height: 1.2;
 }
 main {
   display: flex;
@@ -29,7 +28,6 @@ main {
 }
 
 section {
-  height: 100vh;
   display: flex;
 }
 
@@ -56,14 +54,14 @@ form {
   gap: 10px;
 }
 footer {
-  position: fixed;
-  bottom: 20px;
-  height: 129px;
+  margin: auto;
+  margin-top: 20px;
+  height: 110px;
   width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 70px;
 }
 
 button {

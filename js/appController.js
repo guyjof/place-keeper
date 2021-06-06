@@ -63,17 +63,25 @@ function initMap(lat, lng) {
 //     });
 // }
 
+function renderUserPrefs() {
+    document.body.style.backgroundColor = loadFromStorage('color')
+}
 
-function onColor() {
-    var color = getUserColor()
-    document.body.style.backgroundColor = color
+function onColor(color) {
+    var currColor = color
+    document.body.style.backgroundColor = currColor
+    saveColor(color)
 }
 
 function onChangeAge() {
     var elAge = document.querySelector('.age-num');
     var elRange = document.querySelector('input[type="range"]');
-
     elAge.innerHTML = elRange.value
+}
+
+
+function onSaveChanges() {
+
 }
 
 

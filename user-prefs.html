@@ -10,46 +10,48 @@
     <title>Preferences</title>
 </head>
 
-<body>
+<body onload="renderUserPrefs()">
+    <header class="text-bubble">
+        <h1>preferences</h1>
+    </header>
     <main>
-        <header class="text-bubble">
-            <h1>preferences</h1>
-        </header>
         <!-- Here we will use a <form> to get the user preferences and save them to localStorage. -->
         <!-- The application should use those CSS preferences and show the pages accordingly. -->
         <section>
-            <form action="">
-                <!-- Use HTML5 color <input> to let the user set its background and text color of the home page, keep in localStorage and respect his choices in next visits. -->
+            <form id="myform">
+
                 <label for="color">Pick a background color</label>
-                <input type="color" name="color" id="color" oninput="onColor()">
+                <input type="color" name="color" id="color" oninput="onColor(this.value)">
 
-                <!-- Use HTML5 date and time <input>s to let the user set his exact birth time, when he does show a random astrological forecast in the home page (from an array of 3 ready-made forecasts) -->
                 <label for="date">Pick your birth date</label>
-                <input type="date" name="date" id="date">
+                <input type="date" name="date" id="date" onchange="saveDate(this.value)">
 
-                <!-- TIP: you will need event.preventDefault in the onsubmit event handler. -->
                 <label for="time">Choose the time of your birth</label>
-                <input type="time" name="time" id="time">
+                <input type="time" name="time" id="time" onchange="saveTime(this.value)">
 
                 <label for="email">Enter your Email</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" onchange="saveEmail(this.value)">
+
                 <label for="age">Pick your age</label>
-                <input type="range" min="18" max="120" name="age" id="age" oninput="onChangeAge()"> <span
-                    class="age-num">18</span>
-                <br>
+                <input type="range" min="18" max="120" name="age" id="age" oninput="onChangeAge()"
+                    onchange="saveAge(this.value)">
+                <span class="age-num">18</span>
+
             </form>
         </section>
 
-        <footer class="text-bubble">
-            <button>
-                <a href="index.html">Home</a>
-            </button>
-            <button onsubmit="onSaveChanges()">Save Changes</button>
-            <button>
-                <a href="map.html">Map</a>
-            </button>
-        </footer>
     </main>
+    <footer class="text-bubble">
+        <button>
+            <a href="index.html">Home</a>
+        </button>
+
+        <button form="myform" type="submit">Save Changes</button>
+
+        <button>
+            <a href="map.html">Map</a>
+        </button>
+    </footer>
 
     <script src="/js/services/storageServices.js"></script>
     <script src="js/services/utilService.js"></script>
