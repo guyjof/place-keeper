@@ -18,5 +18,12 @@ function saveAge(age) {
     saveToStorage('age', age)
 }
 
+function isAgeCorect() {
+    let currYear = new Date().getFullYear()
+    let userBirthYear = +loadFromStorage('date').split('-')[0]
+    let age = +loadFromStorage('age')
+    if ((currYear - userBirthYear) !== age) return alert('Age and birth year dont match')
+}
+
 
 

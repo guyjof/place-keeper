@@ -10,11 +10,23 @@
 </head>
 
 <body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <label for="text">Enter new nickname</label>
+            <input type="text" name="text" id="nickname" onchange="saveEmail(this.value)">
+            <label for="text">Enter location name</label>
+            <input type="text" name="text" id="location" onchange="saveEmail(this.value)">
+            <span class="save">save</span>
+
+        </div>
+
+    </div>
     <nav class="center text-bubble">
+
         <h1>Welcome to Pokemon World!</h1>
     </nav>
     <main class=" center flex">
-        <div id="map"></div>
+        <div id="map" onclick="onSetPlace()"></div>
         <div class="places-list">
             <table>
                 <thead>
@@ -48,8 +60,10 @@
             </table>
         </div>
     </main>
-
-    <section>
+    <section class="center-btn">
+        <button onclick="setCurrLocation()" class="my-location"><img src="/img/location.png" alt=""></button>
+    </section>
+    <section class="nav-btns">
         <button>
             <a href="index.html">Home</a>
         </button>
