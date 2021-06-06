@@ -64,3 +64,16 @@ function initMap(lat, lng) {
 // }
 
 
+function onColor() {
+    var color = getUserColor()
+    document.body.style.backgroundColor = color
+}
+
+function onChangeAge() {
+    var elAge = document.querySelector('.age-num');
+    var elRange = document.querySelector('input[type="range"]');
+
+    elAge.innerHTML = elRange.value
+}
+
+

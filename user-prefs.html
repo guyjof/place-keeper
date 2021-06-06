@@ -21,21 +21,21 @@
             <form action="">
                 <!-- Use HTML5 color <input> to let the user set its background and text color of the home page, keep in localStorage and respect his choices in next visits. -->
                 <label for="color">Pick a background color</label>
-                <input type="color" name="color" id="color">
-                <br>
+                <input type="color" name="color" id="color" oninput="onColor()">
+
                 <!-- Use HTML5 date and time <input>s to let the user set his exact birth time, when he does show a random astrological forecast in the home page (from an array of 3 ready-made forecasts) -->
                 <label for="date">Pick your birth date</label>
                 <input type="date" name="date" id="date">
-                <br>
+
                 <!-- TIP: you will need event.preventDefault in the onsubmit event handler. -->
-                <label for="time">Choose the time of your birth date</label>
+                <label for="time">Choose the time of your birth</label>
                 <input type="time" name="time" id="time">
-                <br>
+
                 <label for="email">Enter your Email</label>
                 <input type="email" name="email" id="email">
-                <br>
                 <label for="age">Pick your age</label>
-                <input type="range" min="18" max="120" name="age" id="age"> <span class="age-num">18</span>
+                <input type="range" min="18" max="120" name="age" id="age" oninput="onChangeAge()"> <span
+                    class="age-num">18</span>
                 <br>
             </form>
         </section>
@@ -44,17 +44,13 @@
             <button>
                 <a href="index.html">Home</a>
             </button>
-
+            <button onsubmit="onSaveChanges()">Save Changes</button>
             <button>
                 <a href="map.html">Map</a>
             </button>
         </footer>
     </main>
 
-
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiRrtdr43yR0RnPf3j9N-telgAqwwd2Bk&map_ids=25c4971063e3a54&callback=initMap"
-        type="text/javascript"></script>
     <script src="/js/services/storageServices.js"></script>
     <script src="js/services/utilService.js"></script>
     <script src="/js/services/placeService.js"></script>
