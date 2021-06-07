@@ -108,7 +108,6 @@ span.onclick = function () {
     modal.style.display = "none";
 }
 
-
 // get input from user
 
 // span.onclick = function () {
