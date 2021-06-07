@@ -24,7 +24,7 @@ function initMap(lat, lng) {
         map,
         title: 'You Are Here',
         icon: {
-            url: '/img/ash.png',
+            url: '../img/ash.png',
             scaledSize: new google.maps.Size(40, 40)
         },
         animation: google.maps.Animation.DROP
@@ -48,7 +48,7 @@ function initMap(lat, lng) {
             map,
             title: 'Saved',
             icon: {
-                url: '/img/pokeball.png',
+                url: '../img/pokeball.png',
                 scaledSize: new google.maps.Size(40, 40)
             },
             animation: google.maps.Animation.DROP
