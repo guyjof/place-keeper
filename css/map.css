@@ -200,3 +200,9 @@ button.my-location {
   text-decoration: none;
   cursor: pointer;
 }
+
+input {
+  width: 220px;
+  height: 30px;
+  font-family: "PressStart";
+}
